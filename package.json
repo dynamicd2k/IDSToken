@@ -1,0 +1,25 @@
+{
+  "name": "idstoken",
+  "version": "1.0.0",
+  "description": "IDS token application",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dynamicd2k/IDSToken.git"
+  },
+  "author": "D2K",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dynamicd2k/IDSToken/issues"
+  },
+  "homepage": "https://github.com/dynamicd2k/IDSToken#readme",
+  "dependencies": {
+    "openzeppelin-solidity": "^4.5.0"
+  }
+}
