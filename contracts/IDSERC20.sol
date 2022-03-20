@@ -2,7 +2,7 @@ pragma solidity ^0.8.0;
 
 contract IDSERC20{
 
-    mapping(address => uint256)  _balances;
+    mapping(address => uint256) internal _balances;
 
     uint256  _totalSupply;
 

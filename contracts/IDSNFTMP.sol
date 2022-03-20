@@ -11,8 +11,8 @@ contract IDSNFTMP is IDSERC20, IDSERC721{
         admin= msg.sender;
     }
 
-    function mintTokens(uint256 amount) public returns(bool){
-        mintToken(msg.sender, amount);
+    function mintTokens(address to, uint256 amount) public returns(bool){
+        mintToken(to, amount);
         return true;
     }
 
@@ -22,13 +22,13 @@ contract IDSNFTMP is IDSERC20, IDSERC721{
         return true;
     }
 
-    function buyNFT(uint256 tokenId) public returns(bool){
+    function buyNFT(address to, uint256 tokenId) public returns(bool){
         require(_exists(tokenId), "ERC721Metadata: URI query for nonexistent token");
-        require(_balances[msg.sender]>=1, "ERC20Metadata: Insufficient Balance");
+        require(_balances[to]>=1, "ERC20Metadata: Insufficient Balance");
 
-        transferToken(msg.sender,_owners[tokenId], 1);
+        transferToken(to,_owners[tokenId], 1);
 
-        transferNFT(_owners[tokenId], msg.sender, tokenId);
+        transferNFT(_owners[tokenId], to, tokenId);
 
         return true;
     }
