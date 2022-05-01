@@ -1,5 +1,5 @@
-const IDSNFTMP = artifacts.require("./IDSNFTMP.sol");
+const cyCb = artifacts.require("./cyCb.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(IDSNFTMP);
+  deployer.deploy(cyCb);
 };
